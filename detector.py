@@ -99,6 +99,10 @@ class Detector:
         inferred = time.perf_counter()
         detections = decode(raw, *image.size, ratio, left, top, confidence, iou)
         done = time.perf_counter()
-        return detections, {"preprocess_ms": (ready - start) * 1000,
-                            "inference_ms": (inferred - ready) * 1000,
-                            "postprocess_ms": (done - inferred) * 1000}
+        prep_ms = round((ready - start) * 1000, 2)
+        inf_ms = round((inferred - ready) * 1000, 2)
+        post_ms = round((done - inferred) * 1000, 2)
+        return detections, {"preprocess_ms": prep_ms,
+                            "inference_ms": inf_ms,
+                            "cloud_inference_ms": inf_ms,
+                            "postprocess_ms": post_ms}

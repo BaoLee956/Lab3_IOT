@@ -168,11 +168,15 @@ def infer(data):
         acquired = time.perf_counter()
         detections, timing = app.state.detector.predict(image)
     end = time.perf_counter()
-    timing.update(decode_ms=(decoded - start) * 1000,
-                  queue_ms=(acquired - decoded) * 1000,
-                  cloud_pipeline_ms=(end - start) * 1000)
+    cloud_pipeline_ms = round((end - start) * 1000, 2)
+    timing.update(decode_ms=round((decoded - start) * 1000, 2),
+                  queue_ms=round((acquired - decoded) * 1000, 2),
+                  cloud_pipeline_ms=cloud_pipeline_ms,
+                  cloud_total_ms=cloud_pipeline_ms)
+    cloud_inference_ms = timing.get("cloud_inference_ms", timing.get("inference_ms", 0.0))
     return {"width": image.width, "height": image.height, "detections": detections,
-            "timing": timing, "model_sha256": app.state.checksum}
+            "timing": timing, "cloud_inference_ms": cloud_inference_ms,
+            "model_sha256": app.state.checksum}
 
 
 @app.post("/predict")
