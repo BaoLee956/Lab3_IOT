@@ -1,0 +1,47 @@
+{
+  "model": "assets/model.onnx",
+  "split": "test",
+  "per_class": [
+    {
+      "class_id": 0,
+      "name": "with_mask",
+      "precision": 0.9497466078018642,
+      "recall": 0.7934766839801889,
+      "f1": 0.8646072962659469,
+      "AP50": 0.8664968270540486,
+      "AP50_95": 0.582315846959394
+    },
+    {
+      "class_id": 1,
+      "name": "without_mask",
+      "precision": 0.6571841554451943,
+      "recall": 0.6610169491525424,
+      "f1": 0.6590949796947558,
+      "AP50": 0.6688985529288701,
+      "AP50_95": 0.3579083460692824
+    },
+    {
+      "class_id": 2,
+      "name": "mask_weared_incorrect",
+      "precision": 0.8243415972951904,
+      "recall": 0.29411764705882354,
+      "f1": 0.43354894150377815,
+      "AP50": 0.328342013888889,
+      "AP50_95": 0.19037243751907817
+    }
+  ],
+  "metrics": {
+    "metrics/precision(B)": 0.8104241201807496,
+    "metrics/recall(B)": 0.5828704267305184,
+    "metrics/mAP50(B)": 0.6212457979572693,
+    "metrics/mAP50-95(B)": 0.3768655435159182,
+    "fitness": 0.3768655435159182
+  },
+  "speed_ms_per_image": {
+    "preprocess": 0.6222427786545521,
+    "inference": 48.30878623769065,
+    "loss": 0.0012707295406814453,
+    "postprocess": 1.072195950849268
+  },
+  "note": "Ultralytics validation metrics; not browser-to-cloud latency."
+}

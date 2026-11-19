@@ -1,0 +1,22 @@
+{
+  "model": "assets/model.onnx",
+  "sha256": "ea0296a6907d5c260f4c64eeb33e2b4be626bb5775f69253b9228a4a8578ebb3",
+  "bytes": 10469354,
+  "input": [
+    1,
+    3,
+    416,
+    416
+  ],
+  "output": [
+    1,
+    7,
+    3549
+  ],
+  "classes": [
+    "with_mask",
+    "without_mask",
+    "mask_weared_incorrect"
+  ],
+  "ultralytics": "8.3.230"
+}

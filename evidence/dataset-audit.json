@@ -1,0 +1,50 @@
+{
+  "checked_on": "2026-10-09",
+  "kaggle": {
+    "source": "https://www.kaggle.com/datasets/andrewmvd/face-mask-detection",
+    "images": 853,
+    "xml_files": 853,
+    "objects": {
+      "with_mask": 3232,
+      "without_mask": 717,
+      "mask_weared_incorrect": 123
+    },
+    "license_from_kaggle_api": "CC0: Public Domain",
+    "zip_bytes": 416968083,
+    "zip_sha256": "cabae358a60492a1b96da0510c31475414b64100480ae52cadbe00753bbef904",
+    "split_images_with_each_class": {
+      "train": {
+        "with_mask": 547,
+        "without_mask": 200,
+        "mask_weared_incorrect": 65
+      },
+      "val": {
+        "with_mask": 112,
+        "without_mask": 41,
+        "mask_weared_incorrect": 19
+      },
+      "test": {
+        "with_mask": 109,
+        "without_mask": 45,
+        "mask_weared_incorrect": 13
+      }
+    }
+  },
+  "fmld": {
+    "source": "https://github.com/borutb-fri/FMLD",
+    "annotations_downloaded": true,
+    "source_images_downloaded": false,
+    "all_xml_objects": {
+      "unmasked_face": 43840,
+      "invalid_face": 2856,
+      "masked_face": 29561,
+      "incorrectly_masked_face": 1531
+    },
+    "difficult_zero_objects": {
+      "unmasked_face": 32012,
+      "masked_face": 29532,
+      "incorrectly_masked_face": 1528
+    },
+    "note": "Raw annotation objects include invalid/difficult faces; not identical to headline 63072 valid face images."
+  }
+}

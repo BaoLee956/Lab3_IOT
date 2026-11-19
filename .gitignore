@@ -1,0 +1,40 @@
+# Local environments and caches
+.venv/
+.test-deps/
+.verify-deps/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+tests/.tmp-*/
+tests/browser-script.js
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+PASS_DB.txt
+*.pem
+*.key
+
+# Datasets, training output and generated deployment bundles
+data/
+runs/
+deploy-render/
+*.zip
+*.pt
+model-cache.onnx
+*.part
+
+# Keep only selected model metadata and metrics
+evidence/*
+!evidence/dataset-audit.json
+!evidence/model-info.json
+!evidence/test-metrics.json
+!evidence/onnx-test-metrics.json
+
+# Local measurements and editor/OS files
+tests/latency-*.csv
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

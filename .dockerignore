@@ -1,0 +1,9 @@
+*
+!requirements.txt
+!app.py
+!detector.py
+!alerts.py
+!web/
+!web/**
+!assets/
+!assets/**
